@@ -8,12 +8,12 @@ df = pd.read_csv("project2_fd_clean.csv")
 connection_url = URL.create(
     "mysql+pymysql",
     username="root",
-    password="NewTempPassword123!",
+    password={password},
     host="localhost",
     database="food_delivery_db"
 )
 
-engine = create_engine(  "mysql+pymysql://root:NewTempPassword123!@localhost:3306/food_delivery_db")
+engine = create_engine(  "mysql+pymysql://root:{Password}@localhost:3306/food_delivery_db")
 
 print("MySQL connection created")
 
